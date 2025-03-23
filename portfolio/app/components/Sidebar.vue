@@ -1,8 +1,33 @@
+<script setup>
+const socials = [
+  {
+    name: "Behance",
+    link: "https://www.behance.net/sofiaescobar_design",
+    icon: "",
+  },
+  {
+    name: "Instagram",
+    link: "https://www.facebook.com/share/aBACSoiSTN/?mibextid=wwXlfr",
+    icon: "",
+  },
+  {
+    name: "Facebook",
+    link: "https://www.facebook.com/share/aBACSoiSTN/?mibextid=wwXlfr",
+    icon: "",
+  },
+  {
+    name: "Email",
+    link: "#",
+    icon: "",
+  },
+];
+</script>
+
 <template>
-  <div>
+  <div class="sidebar">
     <div class="logo">
       <img src="#" alt="Logo goes here" />
-      <h2>Sofia Escobar</h2>
+      <h2 class="name">Sofia<br />Escobar</h2>
     </div>
     <nav>
       <ul>
@@ -21,32 +46,43 @@
       </ul>
     </nav>
     <div class="socials">
-      <ul>
-        <li>
-          <a href="https://www.behance.net/sofiaescobar_design" target="_blank">
-            Behance
+      <ul class="socials-list">
+        <li v-for="(social, index) in socials" :key="index">
+          <a :href="social.link" target="_blank">
+            {{ social.name }}
           </a>
-        </li>
-        <li>
-          <a
-            href="https://www.instagram.com/sofiaescobarillustration/profilecard/"
-            target="_blank"
-          >
-            Instagram
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.facebook.com/share/aBACSoiSTN/?mibextid=wwXlfr"
-            target="_blank"
-          >
-            Facebook
-          </a>
-        </li>
-        <li>
-          <a href="#" target="_blank">Email</a>
         </li>
       </ul>
     </div>
   </div>
 </template>
+
+<style scoped>
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: clamp(300px, 30%, 400px);
+}
+
+.logo {
+  margin-top: 20%;
+}
+
+nav {
+  margin-top: 10%;
+}
+
+.socials-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 10%;
+}
+
+.name {
+  color: rgb(219, 94, 72);
+  font-weight: bold;
+  font-size: 3rem;
+}
+</style>
