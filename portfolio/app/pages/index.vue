@@ -12,6 +12,14 @@
 <style>
 .container {
   display: flex;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+}
+
+aside {
+  width: 25%;
+}
+main {
+  width: 75%;
 }
 </style>

@@ -4,7 +4,7 @@ const imgUrls = Object.values(images).map((mod) => mod.default);
 </script>
 
 <template>
-  <div class="grid">
+  <div class="gallery">
     <img
       v-for="(url, index) in imgUrls"
       :key="index"
@@ -16,18 +16,19 @@ const imgUrls = Object.values(images).map((mod) => mod.default);
 </template>
 
 <style scoped>
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 12px;
-  justify-items: center;
-  align-items: center;
-  width: 100%;
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 32px;
+  justify-content: space-evenly;
 }
 
-.grid img {
-  /* width: 100%; */
+.gallery img {
+  display: block;
   height: 250px;
+  width: auto;
   border-radius: 1rem;
+  object-fit: cover;
 }
 </style>

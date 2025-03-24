@@ -62,22 +62,39 @@ const socials = [
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: clamp(300px, 30%, 400px);
+  width: clamp(300px, 100%, 400px);
+  height: 100vh;
+  padding: 16px;
 }
 
 .logo {
-  margin-top: 20%;
+  margin-top: 80%;
+}
+
+.name {
+  letter-spacing: 0.1rem;
 }
 
 nav {
-  margin-top: 10%;
+  margin-top: 20%;
+}
+
+nav li {
+  padding: 8px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  text-transform: uppercase;
 }
 
 .socials-list {
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-top: 10%;
+  margin-top: 20%;
 }
 
 .name {
